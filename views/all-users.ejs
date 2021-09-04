@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Users</title>
+  <link rel="stylesheet" href="output.css" />
+</head>
+
+<body>
+  <table class="table-fixed">
+    <thead>
+      <tr>
+        <th class="border border-black">Sr. No</th>
+        <th class="w-1/4 border border-black">Name</th>
+        <th class="w-1/4 border border-black">Roll</th>
+        <th class="w-1/4 border border-black">Email Id</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% data.forEach((ele,i)=> { %>
+        <tr>
+          <td class="border border-black">
+            <%= i+1 %>
+          </td>
+          <td class="border border-black">
+            <%= ele.name %>
+          </td>
+          <td class="border border-black">
+            <%= ele.roll %>
+          </td>
+          <td class="border border-black">
+            <%= ele.email %>
+          </td>
+        </tr>
+        <% }) %>
+    </tbody>
+  </table>
+</body>
+
+</html>
